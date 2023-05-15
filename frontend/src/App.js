@@ -1,0 +1,23 @@
+import { Menu } from "./components/Menu";
+import { Main } from "./components/Main";
+import { TreeAnimation } from "./components/tree/TreeAnimation";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useClientWidthHeight } from "./hooks/useClientWidthHeight";
+function App() {
+  const clientRect = useClientWidthHeight();
+  const canvasWidth = clientRect.innerWidth;
+  const canvasHeight = clientRect.innerHeight;
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/menu" element={<Menu/>}/>
+          <Route path="/treeanimation" element={<TreeAnimation  canvasWidth={canvasWidth} canvasHeight={canvasHeight}/>}/>
+          <Route path="/" element={<Main/>}/>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;

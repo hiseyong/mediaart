@@ -7,11 +7,16 @@ export function TreeAnimation(props) {
     const [ls , setLs] = useState([])
     const client = axios.create()
     const playAlert = setInterval(function() {
-        client.get('http://127.0.0.1:8000/getTree')
-        .then(res => {
-                setLs(res.data)
-            }
-        )
+        try {
+            client.get('http://127.0.0.1:8000/getTree')
+            .then(res => {
+                    setLs(res.data)
+                }
+            )
+        } catch (err) {
+            console.log(err)
+        }
+        
      }, 2000);
 
      useEffect(()=> {
@@ -93,7 +98,7 @@ export function TreeAnimation(props) {
         y: Math.random() * h,
         l: Math.random() * 1,
         xs: -4 + Math.random() * 4 + 2,
-        ys: Math.random() * 10 + 2
+        ys: Math.random() * 5 + 10
       })
     }
     

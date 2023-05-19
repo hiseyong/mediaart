@@ -1,5 +1,8 @@
 import { Menu } from "./components/Menu";
 import { Main } from "./components/Main";
+import { Memory } from "./components/Memory";
+import { Sound } from "./components/Sound";
+import { PhotoZone } from "./components/PhotoZone";
 import { TreeAnimation } from "./components/tree/TreeAnimation";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useClientWidthHeight } from "./hooks/useClientWidthHeight";
@@ -12,6 +15,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/menu" element={<Menu/>}/>
+          <Route path="/memory" element={<Memory/>}/>
+          <Route path="/sound" element={<Sound/>}/>
+          <Route path="/photozone" element={<PhotoZone/>}/>
           <Route path="/treeanimation" element={<TreeAnimation  canvasWidth={canvasWidth} canvasHeight={canvasHeight}/>}/>
           <Route path="/" element={<Main/>}/>
         </Routes>

@@ -4,27 +4,26 @@ import { useEffect, useState } from "react";
 import treeElem from './tree2.jpg'
 import '../../style/treeanimation.css'
 export function TreeAnimation(props) {
+    console.log("rerender")
     const [ls , setLs] = useState([])
     const client = axios.create()
-    const playAlert = setInterval(function() {
-        try {
-            client.get('http://127.0.0.1:8000/getTree')
-            .then(res => {
-                    setLs(res.data)
-                }
-            )
-        } catch (err) {
-            console.log(err)
-        }
-        
-     }, 2000);
-
+    
      useEffect(()=> {
         client.get('http://127.0.0.1:8000/getTree')
         .then(res => {
                 setLs(res.data)
             }
         )
+        setInterval(function() {
+            client.get('http://127.0.0.1:8000/getTree')
+            .then(res => {
+                    setLs(res.data)
+                }
+            ) .catch(err => {
+                console.log(err)
+            })
+        
+     }, 3000);
      },[])
 
     const generalLs = [
@@ -139,7 +138,7 @@ export function TreeAnimation(props) {
       }
     }
 
-    const isRain = true
+    const isRain = false
     
 
     const animate = (ctx) => {

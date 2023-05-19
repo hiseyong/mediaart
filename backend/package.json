@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "media art backend",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiseyong/mediaart.git"
+  },
+  "author": "hiseyong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiseyong/mediaart/issues"
+  },
+  "homepage": "https://github.com/hiseyong/mediaart#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7",
+    "serialport": "^11.0.0"
+  }
+}

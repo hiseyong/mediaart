@@ -4,17 +4,17 @@ const app = express();
 const morgan = require('morgan');
 const mysql = require('mysql');
 const SerialPort = require("serialport");
+const logger = require('./winston');
+//const sp = new SerialPort("/dev/ttyAMA0", { baudRate:9600, autoOpen:false });
 
-const sp = new SerialPort("/dev/ttyAMA0", { baudRate:9600, autoOpen:false });
-
-
-
+app.use(morgan("combined", {stream : logger.stream}));
+/*
 const connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : '1029',
   database : 'mediaart'
-});
+});*/
 
 app.use(express.json())
 app.use(function (error, req, res, next) {
@@ -28,22 +28,32 @@ app.use(function (error, req, res, next) {
 
 var cors = require('cors');
 app.use(cors());
-connection.connect();
+//connection.connect();
 
 
 app.get('/getTree',(req, res)=>{
   let recUserinfo = req.body.account
-  connection.query(`SELECT * FROM message`, (error, rows) => {
+  logger.info(`getTree`);
+  const msg = [
+    {
+        'author' : 'seyong',
+        'text' : 'msg'
+    }
+  ]
+  res.send(msg)
+  /*connection.query(`SELECT * FROM message`, (error, rows) => {
     if (error) throw error;
     res.send(rows)
-  });
+    logger.info(`getTree: ${rows}`);
+  });*/
 });
 
 
 app.post('/postMessage', (req,res) => {
     const recAuthor = req.body.author
     const recMessage = req.boey.message
-    connection.query(`INSERT INTO message VALUES ('${recAuthor}', '${recMessage}')`, (error) => {
+    logger.info(`postMessage: ${recAuthor}, ${recMessage}`);
+    /*connection.query(`INSERT INTO message VALUES ('${recAuthor}', '${recMessage}')`, (error) => {
         if (error) throw error;
         }
       )
@@ -58,13 +68,12 @@ app.post('/postMessage', (req,res) => {
                 console.log("메세지가 정상적으로 입력되었습니다.");
             }
         });
-    });
+    });*/
     }
 )
 
 
 
-app.use(morgan("combined"));
 
 app.listen(8000, '0.0.0.0');
 

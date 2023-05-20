@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import treeElem from './tree2.jpg'
 import '../../style/treeanimation.css'
 export function TreeAnimation(props) {
-    console.log("rerender")
     const [ls , setLs] = useState([])
     const client = axios.create()
     
+
      useEffect(()=> {
         client.get('http://127.0.0.1:8000/getTree')
         .then(res => {
@@ -17,11 +17,12 @@ export function TreeAnimation(props) {
         setInterval(function() {
             client.get('http://127.0.0.1:8000/getTree')
             .then(res => {
+                    console.log(res.data)
                     setLs(res.data)
                 }
-            ) .catch(err => {
+            ) /*.catch(err => {
                 console.log(err)
-            })
+            })*/
         
      }, 3000);
      },[])
@@ -138,7 +139,7 @@ export function TreeAnimation(props) {
       }
     }
 
-    const isRain = false
+    const isRain = true
     
 
     const animate = (ctx) => {

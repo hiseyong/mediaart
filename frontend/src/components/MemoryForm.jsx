@@ -20,7 +20,7 @@ export function MemoryForm() {
     }
 
     const onClick = () => {
-        client.post('http://127.0.0.1:8000/postMessage',{message})
+        client.post('https://thisisstrangewiki.thisisstrangewiki.com/postMessage',{message})
     }
 
     return(

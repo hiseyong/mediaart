@@ -160,7 +160,7 @@ export function TreeAnimation(props) {
             this.quadraticCurveTo(x, y, x + radius, y);
             this.closePath();
           }
-        ctx.fillStyle = 'rgba(232, 216, 195, 0.13)'
+        ctx.fillStyle = 'rgba(232, 216, 195, 0.8)'
         ctx.roundRect (props.canvasWidth * 0.27 , props.canvasHeight * 0.55 , 250 , 100,30);
         ctx.fill();
         ctx.roundRect (props.canvasWidth * 0.55 , props.canvasHeight * 0.4 , 250 , 100,30);

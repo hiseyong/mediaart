@@ -20,14 +20,17 @@ export function MemoryForm() {
 
     const onClick = () => {
         client.post('http://127.0.0.1:8000/postMessage',{message})
-        navigate('/menu')
+        .then(
+            navigate('/menu')
+        )
+        
     }
 
     return(
         <div id="memoryformwrap">
             <form id='memoryform'>
-                <input placeholder="Enter your name (max is 14)" id='memoryformname' name='author' onChange={onChange} maxLength='14'/>
-                <textarea placeholder="Enter your message (max is 30)" id='memoryformtext' name='text' onChange={onChange} maxLength='30'/>
+                <input placeholder="이름을 입력해 주세요 (최대 14글자)" id='memoryformname' name='author' onChange={onChange} maxLength='14'/>
+                <textarea placeholder="한줄메세지를 입력해 주세요 (최대 30글자)" id='memoryformtext' name='text' onChange={onChange} maxLength='30'/>
                 <button id='memoryformsubmit' onClick={onClick}>Submit</button>
             </form>
         </div>

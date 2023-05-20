@@ -20,9 +20,9 @@ export function MemoryForm() {
 
     const onClick = () => {
         client.post('http://127.0.0.1:8000/postMessage',{message})
-        .then(
+        .then(res => {
             navigate('/menu')
-        )
+        })
         
     }
 

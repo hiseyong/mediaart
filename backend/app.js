@@ -50,7 +50,7 @@ app.get('/getTree',(req, res)=>{
 
 app.post('/postMessage', (req,res) => {
     const recAuthor = req.body.author
-    const recMessage = req.boey.message
+    const recMessage = req.boey.text
     logger.info(`postMessage: ${recAuthor}, ${recMessage}`);
     connection.query(`INSERT INTO message VALUES ('${recAuthor}', '${recMessage}')`, (error) => {
         if (error) throw error;

@@ -1,0 +1,27 @@
+#memoryformwrap {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+}
+
+#memoryformname {
+    margin-top: 30vh;
+    height: 7vh;
+    width: 60vw;
+}
+
+#memoryformtext {
+    margin-top: 5vh;
+    height: 20vh;
+    width: 60vw;
+}
+
+#memoryform{
+    height: 100%;
+}
+
+#memoryformsubmit {
+    margin-top: 4vh;
+    width: 60vw;
+}

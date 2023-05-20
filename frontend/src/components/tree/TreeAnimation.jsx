@@ -147,6 +147,19 @@ export function TreeAnimation(props) {
         if (isRain == true) {
             drawRain(ctx)
         }
+        ctx.roundRect = function (x, y, width, height, radius) {
+            this.beginPath();
+            this.moveTo(x + radius, y);
+            this.lineTo(x + width - radius, y);
+            this.quadraticCurveTo(x + width, y, x + width, y + radius);
+            this.lineTo(x + width, y + height - radius);
+            this.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+            this.lineTo(x + radius, y + height);
+            this.quadraticCurveTo(x, y + height, x, y + height - radius);
+            this.lineTo(x, y + radius);
+            this.quadraticCurveTo(x, y, x + radius, y);
+            this.closePath();
+          }
         ctx.fillStyle = 'rgba(232, 216, 195, 0.13)'
         ctx.roundRect (props.canvasWidth * 0.27 , props.canvasHeight * 0.55 , 250 , 100,30);
         ctx.fill();

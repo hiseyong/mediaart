@@ -56,6 +56,7 @@ app.post('/postMessage', (req,res) => {
         if (error) throw error;
         }
       )
+      /*
       sp.open(function() {
         sp.on("error", function(error) {
             console.log("Error : ", error.message);
@@ -67,7 +68,7 @@ app.post('/postMessage', (req,res) => {
                 console.log("메세지가 정상적으로 입력되었습니다.");
             }
         });
-    });
+    });*/
     }
 )
 

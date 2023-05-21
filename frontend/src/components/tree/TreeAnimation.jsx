@@ -4,84 +4,11 @@ import { useEffect, useState } from "react";
 import treeElem from './tree2.jpg'
 import '../../style/treeanimation.css'
 export function TreeAnimation(props) {
-    const [ls , setLs] = useState([
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'안녕하세요'
-        },
-        {
-            'author': '안세용',
-            'text':'여러분이 보고계신 것은 사실 흰 바람벽 입니다'
-        }
-])
+    const [ls , setLs] = useState([])
     const client = axios.create()
     
 
-    /*useEffect(()=> {
+    useEffect(()=> {
         client.get('http://127.0.0.1:8000/getTree')
         .then(res => {
                 setLs(res.data)
@@ -98,7 +25,7 @@ export function TreeAnimation(props) {
             })
         
      }, 3000);
-     },[])*/
+     },[])
 
     const generalLs = [
         {
@@ -234,27 +161,27 @@ export function TreeAnimation(props) {
             this.closePath();
           }
         ctx.fillStyle = 'rgba(232, 216, 195, 0.8)'
-        ctx.roundRect (props.canvasWidth * 0.27 , props.canvasHeight * 0.55 , 300 , 130, 30);
+        ctx.roundRect (props.canvasWidth * 0.27 , props.canvasHeight * 0.55 , 350 , 130, 30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.55 , props.canvasHeight * 0.4 , 300 , 130, 30);
+        ctx.roundRect (props.canvasWidth * 0.55 , props.canvasHeight * 0.4 , 350 , 130, 30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.4 , props.canvasHeight * 0.15 , 300 , 130, 30);
+        ctx.roundRect (props.canvasWidth * 0.4 , props.canvasHeight * 0.15 , 350 , 130, 30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.12 , 300 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.12 , 350 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.3 , 300 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.3 , 350 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.5 , 300 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.5 , 350 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.7 , 300 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.7 , 350 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.12 , 300 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.12 , 350 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.3 , 300 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.3 , 350 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.5 , 300 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.5 , 350 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.7 , 300 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.7 , 350 , 130,30);
         ctx.fill();
         ctx.fillStyle = "rgb(0,0,0)";
         ctx.font = '30px sans-serif'

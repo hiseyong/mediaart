@@ -234,11 +234,11 @@ export function TreeAnimation(props) {
             this.closePath();
           }
         ctx.fillStyle = 'rgba(232, 216, 195, 0.8)'
-        ctx.roundRect (props.canvasWidth * 0.27 , props.canvasHeight * 0.55 , 300 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.27 , props.canvasHeight * 0.55 , 300 , 130, 30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.55 , props.canvasHeight * 0.4 , 300 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.55 , props.canvasHeight * 0.4 , 300 , 130, 30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.4 , props.canvasHeight * 0.15 , 300 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.4 , props.canvasHeight * 0.15 , 300 , 130, 30);
         ctx.fill();
         ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.12 , 300 , 130,30);
         ctx.fill();

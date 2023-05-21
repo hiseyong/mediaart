@@ -4,11 +4,84 @@ import { useEffect, useState } from "react";
 import treeElem from './tree2.jpg'
 import '../../style/treeanimation.css'
 export function TreeAnimation(props) {
-    const [ls , setLs] = useState([])
+    const [ls , setLs] = useState([
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'안녕하세요'
+        },
+        {
+            'author': '안세용',
+            'text':'여러분이 보고계신 것은 사실 흰 바람벽 입니다'
+        }
+])
     const client = axios.create()
     
 
-     useEffect(()=> {
+    /*useEffect(()=> {
         client.get('http://127.0.0.1:8000/getTree')
         .then(res => {
                 setLs(res.data)
@@ -20,12 +93,12 @@ export function TreeAnimation(props) {
                     console.log(res.data)
                     setLs(res.data)
                 }
-            ) /*.catch(err => {
+            ) .catch(err => {
                 console.log(err)
-            })*/
+            })
         
      }, 3000);
-     },[])
+     },[])*/
 
     const generalLs = [
         {
@@ -161,73 +234,73 @@ export function TreeAnimation(props) {
             this.closePath();
           }
         ctx.fillStyle = 'rgba(232, 216, 195, 0.8)'
-        ctx.roundRect (props.canvasWidth * 0.27 , props.canvasHeight * 0.55 , 250 , 100,30);
+        ctx.roundRect (props.canvasWidth * 0.27 , props.canvasHeight * 0.55 , 300 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.55 , props.canvasHeight * 0.4 , 250 , 100,30);
+        ctx.roundRect (props.canvasWidth * 0.55 , props.canvasHeight * 0.4 , 300 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.4 , props.canvasHeight * 0.15 , 250 , 100,30);
+        ctx.roundRect (props.canvasWidth * 0.4 , props.canvasHeight * 0.15 , 300 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.12 , 250 , 100,30);
+        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.12 , 300 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.3 , 250 , 100,30);
+        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.3 , 300 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.5 , 250 , 100,30);
+        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.5 , 300 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.7 , 250 , 100,30);
+        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.7 , 300 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.8 , props.canvasHeight * 0.12 , 250 , 100,30);
+        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.12 , 300 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.8 , props.canvasHeight * 0.3 , 250 , 100,30);
+        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.3 , 300 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.8 , props.canvasHeight * 0.5 , 250 , 100,30);
+        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.5 , 300 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.8 , props.canvasHeight * 0.7 , 250 , 100,30);
+        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.7 , 300 , 130,30);
         ctx.fill();
         ctx.fillStyle = "rgb(0,0,0)";
+        ctx.font = '30px sans-serif'
+        ctx.fillText(generalLs[0].author, props.canvasWidth * 0.28 , props.canvasHeight * 0.58, 280)
         ctx.font = '20px sans-serif'
-        ctx.fillText(generalLs[0].author, props.canvasWidth * 0.28 , props.canvasHeight * 0.57, 230)
-        ctx.font = '16px sans-serif'
-        ctx.fillText(generalLs[0].text, props.canvasWidth * 0.28 , props.canvasHeight * 0.61, 230)
+        ctx.fillText(generalLs[0].text, props.canvasWidth * 0.28 , props.canvasHeight * 0.61, 280)
+        ctx.font = '30px sans-serif'
+        ctx.fillText(generalLs[1].author, props.canvasWidth * 0.56 , props.canvasHeight * 0.43, 280)
         ctx.font = '20px sans-serif'
-        ctx.fillText(generalLs[1].author, props.canvasWidth * 0.56 , props.canvasHeight * 0.43, 230)
-        ctx.font = '16px sans-serif'
-        ctx.fillText(generalLs[1].text, props.canvasWidth * 0.56 , props.canvasHeight * 0.47, 230)
+        ctx.fillText(generalLs[1].text, props.canvasWidth * 0.56 , props.canvasHeight * 0.47, 280)
+        ctx.font = '30px sans-serif'
+        ctx.fillText(generalLs[2].author, props.canvasWidth * 0.41 , props.canvasHeight * 0.18, 280)
         ctx.font = '20px sans-serif'
-        ctx.fillText(generalLs[2].author, props.canvasWidth * 0.41 , props.canvasHeight * 0.18, 230)
-        ctx.font = '16px sans-serif'
-        ctx.fillText(generalLs[2].text, props.canvasWidth * 0.41 , props.canvasHeight * 0.22, 230)
+        ctx.fillText(generalLs[2].text, props.canvasWidth * 0.41 , props.canvasHeight * 0.22, 280)
+        ctx.font = '30px sans-serif'
+        ctx.fillText(generalLs[3].author, props.canvasWidth * 0.03 , props.canvasHeight * 0.15, 280)
         ctx.font = '20px sans-serif'
-        ctx.fillText(generalLs[3].author, props.canvasWidth * 0.03 , props.canvasHeight * 0.15, 230)
-        ctx.font = '16px sans-serif'
-        ctx.fillText(generalLs[3].text, props.canvasWidth * 0.03 , props.canvasHeight * 0.19, 230)
+        ctx.fillText(generalLs[3].text, props.canvasWidth * 0.03 , props.canvasHeight * 0.19, 280)
+        ctx.font = '30px sans-serif'
+        ctx.fillText(generalLs[4].author, props.canvasWidth * 0.03 , props.canvasHeight * 0.33, 280)
         ctx.font = '20px sans-serif'
-        ctx.fillText(generalLs[4].author, props.canvasWidth * 0.03 , props.canvasHeight * 0.33, 230)
-        ctx.font = '16px sans-serif'
-        ctx.fillText(generalLs[4].text, props.canvasWidth * 0.03 , props.canvasHeight * 0.37, 230)
+        ctx.fillText(generalLs[4].text, props.canvasWidth * 0.03 , props.canvasHeight * 0.37, 280)
+        ctx.font = '30px sans-serif'
+        ctx.fillText(generalLs[5].author, props.canvasWidth * 0.03 , props.canvasHeight * 0.53, 280)
         ctx.font = '20px sans-serif'
-        ctx.fillText(generalLs[5].author, props.canvasWidth * 0.03 , props.canvasHeight * 0.53, 230)
-        ctx.font = '16px sans-serif'
-        ctx.fillText(generalLs[5].text, props.canvasWidth * 0.03 , props.canvasHeight * 0.57, 230)
+        ctx.fillText(generalLs[5].text, props.canvasWidth * 0.03 , props.canvasHeight * 0.57, 280)
+        ctx.font = '30px sans-serif'
+        ctx.fillText(generalLs[6].author, props.canvasWidth * 0.03 , props.canvasHeight * 0.73, 280)
         ctx.font = '20px sans-serif'
-        ctx.fillText(generalLs[6].author, props.canvasWidth * 0.03 , props.canvasHeight * 0.73, 230)
-        ctx.font = '16px sans-serif'
-        ctx.fillText(generalLs[6].text, props.canvasWidth * 0.03 , props.canvasHeight * 0.77, 230)
+        ctx.fillText(generalLs[6].text, props.canvasWidth * 0.03 , props.canvasHeight * 0.77, 280)
+        ctx.font = '30px sans-serif'
+        ctx.fillText(generalLs[7].author, props.canvasWidth * 0.79 , props.canvasHeight * 0.15, 280)
         ctx.font = '20px sans-serif'
-        ctx.fillText(generalLs[7].author, props.canvasWidth * 0.81 , props.canvasHeight * 0.15, 230)
-        ctx.font = '16px sans-serif'
-        ctx.fillText(generalLs[7].text, props.canvasWidth * 0.81 , props.canvasHeight * 0.19, 230)
+        ctx.fillText(generalLs[7].text, props.canvasWidth * 0.79 , props.canvasHeight * 0.19, 280)
+        ctx.font = '30px sans-serif'
+        ctx.fillText(generalLs[8].author, props.canvasWidth * 0.79 , props.canvasHeight * 0.33, 280)
         ctx.font = '20px sans-serif'
-        ctx.fillText(generalLs[8].author, props.canvasWidth * 0.81 , props.canvasHeight * 0.33, 230)
-        ctx.font = '16px sans-serif'
-        ctx.fillText(generalLs[8].text, props.canvasWidth * 0.81 , props.canvasHeight * 0.37, 230)
+        ctx.fillText(generalLs[8].text, props.canvasWidth * 0.79 , props.canvasHeight * 0.37, 280)
+        ctx.font = '30px sans-serif'
+        ctx.fillText(generalLs[9].author, props.canvasWidth * 0.79 , props.canvasHeight * 0.53, 280)
         ctx.font = '20px sans-serif'
-        ctx.fillText(generalLs[9].author, props.canvasWidth * 0.81 , props.canvasHeight * 0.53, 230)
-        ctx.font = '16px sans-serif'
-        ctx.fillText(generalLs[9].text, props.canvasWidth * 0.81 , props.canvasHeight * 0.57, 230)
+        ctx.fillText(generalLs[9].text, props.canvasWidth * 0.79 , props.canvasHeight * 0.57, 280)
+        ctx.font = '30px sans-serif'
+        ctx.fillText(generalLs[10].author, props.canvasWidth * 0.79 , props.canvasHeight * 0.73, 280)
         ctx.font = '20px sans-serif'
-        ctx.fillText(generalLs[10].author, props.canvasWidth * 0.81 , props.canvasHeight * 0.73, 230)
-        ctx.font = '16px sans-serif'
-        ctx.fillText(generalLs[10].text, props.canvasWidth * 0.81 , props.canvasHeight * 0.77, 230)
+        ctx.fillText(generalLs[10].text, props.canvasWidth * 0.79 , props.canvasHeight * 0.77, 280)
     }
     const canvasRef = useCanvas(props.canvasWidth, props.canvasHeight, animate);
     return(

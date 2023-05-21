@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 export function MemoryForm() {
-    const navigate = useNavigate()
     const client = axios.create()
     const [message, setMessage] = useState({
         'author': '',

@@ -161,31 +161,31 @@ export function TreeAnimation(props) {
             this.closePath();
           }
         ctx.fillStyle = 'rgba(232, 216, 195, 0.8)'
-        ctx.roundRect (props.canvasWidth * 0.27 , props.canvasHeight * 0.55 , 350 , 130, 30);
+        ctx.roundRect (props.canvasWidth * 0.27 , props.canvasHeight * 0.55 , 370 , 130, 30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.55 , props.canvasHeight * 0.4 , 350 , 130, 30);
+        ctx.roundRect (props.canvasWidth * 0.55 , props.canvasHeight * 0.4 , 370 , 130, 30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.4 , props.canvasHeight * 0.15 , 350 , 130, 30);
+        ctx.roundRect (props.canvasWidth * 0.4 , props.canvasHeight * 0.15 , 370 , 130, 30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.12 , 350 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.12 , 370 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.3 , 350 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.3 , 370 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.5 , 350 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.5 , 370 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.7 , 350 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.02 , props.canvasHeight * 0.7 , 370 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.12 , 350 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.12 , 370 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.3 , 350 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.3 , 370 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.5 , 350 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.5 , 370 , 130,30);
         ctx.fill();
-        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.7 , 350 , 130,30);
+        ctx.roundRect (props.canvasWidth * 0.78 , props.canvasHeight * 0.7 , 370 , 130,30);
         ctx.fill();
         ctx.fillStyle = "rgb(0,0,0)";
         ctx.font = '30px sans-serif'
-        ctx.fillText(generalLs[0].author, props.canvasWidth * 0.28 , props.canvasHeight * 0.58, 280)
+        ctx.fillText(generalLs[0].author, props.canvasWidth * 0.28 , props.canvasHeight * 0.58, 350)
         ctx.font = '20px sans-serif'
         ctx.fillText(generalLs[0].text, props.canvasWidth * 0.28 , props.canvasHeight * 0.61, 280)
         ctx.font = '30px sans-serif'

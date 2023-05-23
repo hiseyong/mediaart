@@ -25,8 +25,9 @@ export function MemoryForm() {
     return(
         <div id="memoryformwrap">
             <form id='memoryform'>
-                <input placeholder="이름을 입력해 주세요 (최대 14글자)" id='memoryformname' name='author' onChange={onChange} maxLength='14'/>
-                <textarea placeholder="한줄메세지를 입력해 주세요 (최대 30글자)" id='memoryformtext' name='text' onChange={onChange} maxLength='30'/>
+                <input placeholder="이름을 입력해 주세요" id='memoryformname' name='author' onChange={onChange} maxLength='14'/>
+                <br/>
+                <textarea placeholder="한줄메세지를 입력해 주세요. 부적절한 언어는 삼가해 주세요." id='memoryformtext' name='text' onChange={onChange} maxLength='30'/>
                 <Link to='/menu'>
                     <button id='memoryformsubmit' onClick={onClick}>Submit</button>
                 </Link>

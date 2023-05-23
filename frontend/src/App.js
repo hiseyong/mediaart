@@ -6,6 +6,7 @@ import { PhotoZone } from "./components/PhotoZone";
 import { TreeAnimation } from "./components/tree/TreeAnimation";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useClientWidthHeight } from "./hooks/useClientWidthHeight";
+import { Footer } from "./components/Footer";
 import { MemoryForm } from "./components/MemoryForm";
 function App() {
   const clientRect = useClientWidthHeight();
@@ -23,6 +24,7 @@ function App() {
           <Route path="/treeanimation" element={<TreeAnimation  canvasWidth={canvasWidth} canvasHeight={canvasHeight}/>}/>
           <Route path="/" element={<Main/>}/>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   );

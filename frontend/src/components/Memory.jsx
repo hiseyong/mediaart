@@ -7,6 +7,10 @@ export function Memory() {
 						<div class="content">
 							<h1>MEMORIES IN SUMMER</h1>
 							<p class="major">여름의 기억을 담다</p>
+
+							<Link to='/menu'>
+                            <button>Back To Menu</button>
+                        </Link>
 						</div>
 						<div class="image">
 							<img src={banner} alt="" />

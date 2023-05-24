@@ -25,7 +25,7 @@ function App() {
           <Route path="/" element={<Main/>}/>
         </Routes>
         <Footer/>
-      </BrowserRouter>
+        </BrowserRouter>
     </div>
   );
 }

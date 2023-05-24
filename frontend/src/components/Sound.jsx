@@ -1,6 +1,10 @@
 import banner from './images/banner.jpg'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 export function Sound() {
+	useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
         <div>
             <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">

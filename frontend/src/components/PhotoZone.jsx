@@ -1,12 +1,16 @@
 import banner from './images/banner.jpg'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 export function PhotoZone() {
+	useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
         <div>
             <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
-							<h1>MEMORIES IN SUMMER</h1>
-							<p class="major">여름의 기억을 담다</p>
+							<h1>PHOTO ZONE</h1>
+							<p class="major">새로운 기억을 만들다</p>
 
                         <Link to='/menu'>
                             <button>Back To Menu</button>
@@ -20,8 +24,8 @@ export function PhotoZone() {
                     
 					<section class="wrapper style1 align-center">
 						<div class="inner">
-							<h2>기억으로 만드는 전시</h2>
-							<p>자신만의 여름 속 기억으로 전시를 채우다</p>
+							<h2>기억을 만드는 전시</h2>
+							<p>새로운 기억을 만들다</p>
 
 							<div class="items style1 medium onscroll-fade-in">
 								<section>

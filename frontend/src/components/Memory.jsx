@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 import banner from './images/banner.jpg'
+import { useEffect } from 'react'
 export function Memory() {
+	useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
         <div>
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
@@ -33,7 +37,7 @@ export function Memory() {
 								<section>
 									<h3>전시물 소개</h3>
 									<p>자신의 기억을 전시물에 잠시 남김으로써 관람객은 스스로 전시를 구성해 나간다.</p>
-									<p>기억은 가장 최근의 11개가 표시된다</p>
+									<p>기억은 전시물에서 가장 최근의 11개가 표시된다</p>
 									<p>전시물 외에 웹사이트에서 그동안 저장된 메세지를 모두 볼 수 있다</p>
 								</section>
 								<section>
